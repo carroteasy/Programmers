@@ -4,22 +4,21 @@
 using namespace std;
 
 int main() {
+    string s;
+    int x = 1;
 
-	string s;
-	int res = 1;
+    getline(cin, s);
 
-	getline(cin, s);
+    if (s.size() == 1 && s[0] == ' ') {
+        cout << 0;
+        return 0;
+    }
 
-	if (s.length() == 1 && s[0] == ' ') {
-		cout << 0;
-		return 0;
-	}
+    for (int i = 1; i < s.size()-1; i++) {
+        if (s[i] == ' ') {
+            x++;
+        }
+    }
+    cout << x;
 
-	for (int i = 1; i < s.length() - 1; i++) {
-		if (s[i] == ' ') res++;
-	}
-
-	cout << res;
-
-	return 0;
 }
